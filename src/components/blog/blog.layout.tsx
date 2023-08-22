@@ -37,9 +37,9 @@ export const BlogLayout: FC<{
           </div>
         </nav>
         {!!image && (
-          <div className="relative h-[358px] mb-10">
+          <div className="relative mb-10">
             <img
-              className="w-full h-full object-cover"
+              className="w-full object-cover"
               src={image} // Replace with actual path to header image
               alt="Blog Header"
             />
