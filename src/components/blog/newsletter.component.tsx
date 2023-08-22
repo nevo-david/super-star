@@ -61,6 +61,7 @@ const NewsletterComponent: FC<{ showText: boolean }> = (props) => {
           </button>
         </form>
       )}
+        <div className="text-sm mt-[10px]">Or invite your friend to learn <a href="https://howtogetgithubstars.com" className="underline cursor-pointer" target="_blank">How to get GitHub stars</a></div>
     </div>
   );
 };
