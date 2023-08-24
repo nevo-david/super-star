@@ -190,7 +190,7 @@ export class BeeHiivService
       ...(
         await Promise.all(
           list
-            .filter((f) => dayjs.unix(f.publish_date).isBefore(dayjs()))
+            .filter((f) => dayjs.unix(f.publish_date).isBefore(dayjs()) && f.platform !== 'email')
             .map(async (l) => ({
               id: l.id,
               title: l.title,
