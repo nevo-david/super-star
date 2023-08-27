@@ -111,7 +111,7 @@ rdt('track', 'PageVisit');
             data-rewardful={process.env.REWARDFUL_ID!}
             strategy="afterInteractive"
           />
-            <Script id="smartlook" strategy="afterInteractive">
+            <Script id="smartlook" strategy="beforeInteractive">
                 {`window.smartlook||(function(d) { var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0]; var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript'; c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c); })(document); window.smartlook('init', '052305404b0a55d3e9bd69779b224b9170b45dbc', { region: 'eu' });`}
             </Script>
         </>
