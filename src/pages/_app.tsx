@@ -4,7 +4,8 @@ import Script from "next/script";
 import Head from "next/head";
 
 export default function App({Component, pageProps}: AppProps) {
-    return (<>
+    return (
+        <>
             {!!process.env.G_TAG_ANALYTICS && (<>
                     <Script
                         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.G_TAG_ANALYTICS}`}
@@ -106,5 +107,6 @@ rdt('track', 'PageVisit');
                 <title>{process.env.COURSE_NAME}</title>
             </Head>
             <Component {...pageProps} />
-        </>);
+        </>
+    );
 }
