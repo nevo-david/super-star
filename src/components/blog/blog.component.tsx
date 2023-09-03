@@ -30,7 +30,7 @@ export const BlogComponent: FC<{
                             className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8"
                         >
                             <div>
-                                <div className="h-[150px] flex items-center bg-[#080326] p-3 rounded-lg">
+                                <div className="min-h-[150px] flex items-center bg-[#080326] p-3 rounded-lg">
                                     <Link href={`/blog/${blogArticle.slug}`}>
                                         <img
                                             src={blogArticle.picture}

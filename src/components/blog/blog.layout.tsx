@@ -26,13 +26,22 @@ export const BlogLayout: FC<{
                   Blog
                 </Link>
               </li>
-              <li className="mr-4">
+              <li className="mr-4 flex-1">
                 <Link
                   href="https://docs.github20k.com"
                   target="_blank"
                   className="font-semibold"
                 >
                   Docs
+                </Link>
+              </li>
+              <li>
+                <Link
+                    href="https://calendly.com/github20k/30min?utm_source=blog"
+                    target="_blank"
+                    className="font-semibold"
+                >
+                  Need help? let{"'"}s talk!
                 </Link>
               </li>
             </ul>

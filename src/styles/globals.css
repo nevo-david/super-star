@@ -173,3 +173,8 @@ a {
 .title-shadow-add {
   text-shadow: 2px 2px 7px rgba(0,0,0,0.24);
 }
+
+.title-shadow-strong {
+  text-shadow: 2px 1px 1px #000;
+}
+

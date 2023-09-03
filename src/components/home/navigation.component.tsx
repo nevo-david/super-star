@@ -8,30 +8,14 @@ const NavigationComponent: FC<{ stars: number }> = (props) => {
     return numeral(stars).format();
   }, [stars]);
   return (
-    <header className="max-w-base w-full mx-auto px-6 absolute top-0 right-0 z-50 mt-9 xl:mt-16">
+    <header className="max-w-[250px] w-full mx-auto px-6 absolute top-0 right-0 z-50 mt-9 xl:mt-16">
       <div className="sm:max-w-xs mx-auto md:mr-0 flex items-center bg-nav-stat-gr border border-brand-plum divide-x-2 divide-brand-plum rounded-xl p-1">
-        <button className="flex-1 flex items-center justify-center gap-x-5 py-2.5 xl:py-3.5 text-brand-plum font-semibold">
-          <Link
-            href={`https://github.com/${process.env.GITHUB_REPO}`}
-            target="blank"
-            className="uppercase"
-          >
-            <GithubSvg />
-          </Link>
-          <Link
-            href={`https://github.com/${process.env.GITHUB_REPO}`}
-            target="blank"
-            className="uppercase"
-          >
-            stars
-          </Link>
-        </button>
         <Link
-          href={`https://github.com/${process.env.GITHUB_REPO}`}
+          href={`https://calendly.com/github20k/30min?utm_source=website`}
           target="blank"
-          className="flex-1 text-brand-white-medium text-center py-2.5 font-semibold xl:py-3.5"
+          className="flex-1 text-brand-white-medium text-center font-semibold xl:py-3.5 title-shadow-strong drop-shadow-xl"
         >
-          {formatStars}
+          Need help? Let{"'"}s talk!
         </Link>
       </div>
     </header>

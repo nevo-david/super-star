@@ -10,6 +10,7 @@ import {mainPageDetails} from "@github20k/helpers/main.page.details";
 import {stripHtml} from "string-strip-html";
 import ReactDomServer from "react-dom/server";
 import {SmartLookLazy} from "@github20k/helpers/smartlook.lazy.component";
+import NavigationComponent from "@github20k/components/home/navigation.component";
 
 const HomeComponent: FC<{ stargazers_count: number }> = (props) => {
 
@@ -35,6 +36,7 @@ const HomeComponent: FC<{ stargazers_count: number }> = (props) => {
                 }}
             />
             <SmartLookLazy />
+            <NavigationComponent stars={0} />
             <main>
                 <HeroComponent/>
                 <div className="relative bg-about-bg bg-cover lg:bg-contain bg-center bg-no-repeat">
