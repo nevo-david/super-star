@@ -16,6 +16,11 @@ const NewsletterComponent: FC<{ showText: boolean }> = (props) => {
         email: "",
       },
       onSubmit: (values) => {
+        // @ts-ignore
+        if (window?.gtag) {
+          // @ts-ignore
+          window.gtag("event", "conversion");
+        }
         axios.post("/api/newsletter", { ...values, referrer: referrer() });
         setSubmitted(true);
       },
