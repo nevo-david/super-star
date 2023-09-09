@@ -15,9 +15,13 @@ export const BlogComponent: FC<{
                 description="Learn the best tips and trick to grow your GitHub library"
                 canonical={process.env.COURSE_URL}
                 openGraph={{
-                    url: process.env.COURSE_URL, title: process.env.COURSE_NAME, description: 'Learn the best tips and trick to grow your GitHub library', images: [{
+                    url: process.env.COURSE_URL,
+                    title: process.env.COURSE_NAME,
+                    description: 'Learn the best tips and trick to grow your GitHub library',
+                    images: [{
                         url: process.env.COURSE_URL + "/github-blog.png", width: 1200, height: 630, alt: process.env.COURSE_NAME, type: "image/png",
-                    },], siteName: process.env.COURSE_NAME,
+                    }],
+                    siteName: process.env.COURSE_NAME,
                 }}
                 twitter={{
                     handle: "@nevodavid", site: "@nevodavid", cardType: "summary_large_image",
