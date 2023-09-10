@@ -150,6 +150,10 @@ a {
   max-width: 100%;
 }
 
+.blog-container a {
+  color: white !important;
+}
+
 @layer base {
   body {
     @apply bg-brand-main font-ibm-sans;
