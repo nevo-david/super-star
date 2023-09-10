@@ -26,7 +26,8 @@ export class BeehiivService
     name?: string,
     slug?: string,
     tag?: string,
-    referrer?: string
+    referrer?: string,
+    magnet?: boolean
   ) {
     const [FNAME, ...LNAME] = (name || "").split(" ");
     await axiosInstance.post(
@@ -77,6 +78,16 @@ export class BeehiivService
               ]
             : []),
         ],
+          ...magnet ? {
+              utm_source: "magnet",
+              custom_fields: [{
+                  name: "first_subject", value: "Grow your first 1,000 GitHub stars!",
+              }, {
+                  name: "slug", value: `Please check this video:
+                    https://www.youtube.com/watch?v=bXxq8RQUfXk`,
+                  }
+              ],
+          } : {}
       }
     );
   }

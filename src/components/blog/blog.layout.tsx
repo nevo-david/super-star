@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FC, ReactNode } from "react";
 import FooterComponent from "@github20k/components/home/footer.component";
 import {SmartLookLazy} from "@github20k/helpers/smartlook.lazy.component";
+import ExitComponent from "@github20k/helpers/use.exit";
 
 export const BlogLayout: FC<{
   stargazers_count: number;
@@ -11,6 +12,7 @@ export const BlogLayout: FC<{
   const { stargazers_count, image, children } = props;
   return (
     <>
+      <ExitComponent />
       <SmartLookLazy />
       <div className="container mx-auto max-w-[800px] px-4 pb-10">
         <nav className="text-white flex">

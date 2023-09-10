@@ -4,8 +4,8 @@ import newsletterValidation from "@github20k/helpers/newsletter.validation";
 import axios from "axios";
 import { useReferrer } from "@github20k/helpers/use.referrer";
 
-const NewsletterComponent: FC<{ showText: boolean }> = (props) => {
-  const { showText } = props;
+const NewsletterComponent: FC<{ showText: boolean, hideBottom?: boolean, magnet?: boolean }> = (props) => {
+  const { magnet, hideBottom, showText } = props;
   const referrer = useReferrer();
   const [submitted, setSubmitted] = useState(false);
   const { values, errors, touched, handleChange, handleSubmit, handleBlur } =
@@ -16,12 +16,13 @@ const NewsletterComponent: FC<{ showText: boolean }> = (props) => {
         email: "",
       },
       onSubmit: (values) => {
+        localStorage.setItem('once', 'true');
         // @ts-ignore
         if (window?.gtag) {
           // @ts-ignore
           window.gtag("event", "conversion");
         }
-        axios.post("/api/newsletter", { ...values, referrer: referrer() });
+        axios.post("/api/newsletter", { ...values, referrer: referrer(), magnet });
         setSubmitted(true);
       },
     });
@@ -66,7 +67,7 @@ const NewsletterComponent: FC<{ showText: boolean }> = (props) => {
           </button>
         </form>
       )}
-        <div className="text-sm mt-[10px]">Or invite your friend to learn <a href="https://howtogetgithubstars.com" className="underline cursor-pointer" target="_blank">How to get GitHub stars</a></div>
+      {!hideBottom && (<div className="text-sm mt-[10px]">Or invite your friend to learn <a href="https://howtogetgithubstars.com" className="underline cursor-pointer" target="_blank">How to get GitHub stars</a></div>)}
     </div>
   );
 };
