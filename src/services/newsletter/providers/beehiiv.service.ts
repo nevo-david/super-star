@@ -36,6 +36,7 @@ export class BeehiivService
         email: email_address,
         reactivate_existing: false,
         send_welcome_email: true,
+        utm_source: "magnet",
         ...(referrer
           ? {
               referring_site: referrer,
@@ -47,22 +48,6 @@ export class BeehiivService
             }
           : {}),
         custom_fields: [
-          ...(FNAME
-            ? [
-                {
-                  name: "first_name",
-                  value: FNAME,
-                },
-              ]
-            : []),
-          ...(LNAME.length
-            ? [
-                {
-                  name: "last_name",
-                  value: LNAME.join(" "),
-                },
-              ]
-            : []),
           ...(slug
             ? [
                 {
@@ -76,18 +61,13 @@ export class BeehiivService
                   https://libraries.github20k.com/site/${slug}`,
                 },
               ]
-            : []),
-        ],
-          ...magnet ? {
-              utm_source: "magnet",
-              custom_fields: [{
+            : [{
                   name: "first_subject", value: "Grow your first 1,000 GitHub stars!",
               }, {
                   name: "slug", value: `Please check this video:
-                    https://www.youtube.com/watch?v=bXxq8RQUfXk`,
-                  }
-              ],
-          } : {}
+                  https://www.youtube.com/watch?v=bXxq8RQUfXk`,
+              }]),
+        ],
       }
     );
   }
