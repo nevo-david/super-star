@@ -67,6 +67,7 @@ const NewsletterComponent: FC<{ showText: boolean, hideBottom?: boolean, magnet?
           </button>
         </form>
       )}
+        <div className="text-lg mt-[10px] font-extrabold"><span className="text-rose-700">*</span> Add your email and I will send you a video of getting your first 1000 stars.</div>
       {!hideBottom && (<div className="text-sm mt-[10px]">Or invite your friend to learn <a href="https://howtogetgithubstars.com" className="underline cursor-pointer" target="_blank">How to get GitHub stars</a></div>)}
     </div>
   );
