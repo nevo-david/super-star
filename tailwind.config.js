@@ -75,6 +75,9 @@ module.exports = {
         h2: ['2.5rem', '2.75rem'],
         'sub-title': ['26px', '29px'],
       },
+      boxShadow: {
+        'yellow-glow': '0 0 40px #fff'
+      },
       backgroundPosition: {
         'left-top': 'left -19rem top 50rem',
         'left-top-mobile': 'left -20.5rem top 60rem',

@@ -9,7 +9,7 @@ const NavigationComponent: FC<{ stars: number }> = (props) => {
   }, [stars]);
   return (
     <header className="max-w-[250px] w-full mx-auto px-6 absolute top-0 right-0 z-50 mt-9 xl:mt-16">
-      <div className="animate-bounce sm:max-w-xs mx-auto md:mr-0 flex items-center bg-nav-stat-gr border border-brand-plum divide-x-2 divide-brand-plum rounded-xl p-1">
+      <div className="fixed px-4 shadow-yellow-glow animate-bounce sm:max-w-xs mx-auto md:mr-0 flex items-center bg-nav-stat-gr border border-brand-plum divide-x-2 divide-brand-plum rounded-xl p-1">
         <Link
           href={`https://calendly.com/github20k/30min?utm_source=website`}
           target="blank"
