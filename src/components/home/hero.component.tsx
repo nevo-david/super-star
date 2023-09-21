@@ -17,7 +17,7 @@ const HeroComponent = () => {
           </p>
 
           <div className="flex max-w-xl lg:max-w-2xl mx-auto lg:ml-0 text-brand-white-light font-medium text-lg leading-8 md:text-xl md:leading-snug xl:text-2xl pt-10 px-4">
-            <NewsletterComponent showText={false} />
+            <NewsletterComponent showText={false} hideBottom={true} />
           </div>
         </div>
         <div className="max-w-md xl:max-w-lg mx-auto pb-12 pt-40 md:pt-32">

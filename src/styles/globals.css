@@ -182,3 +182,6 @@ a {
   text-shadow: 2px 1px 1px #000;
 }
 
+.balance {
+  text-wrap: balance;
+}

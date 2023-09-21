@@ -15,16 +15,10 @@ export const mainPageDetails = {
       </span>
     ),
     description: (
-      <>
-        Learn how we have grown{" "}
-        <span className="text-brand-main-medium bg-brand-plum-light">
-          Novu community
-        </span>
-        <br />
-        Gaining more stars, forks and clients.
-        <br />
+      <span className="font-bold">
+        Learn how we have grown<br />Novu community to 24k stars,<br />Gaining more forks and clients<br />
         subscribe to get weekly tips
-      </>
+      </span>
     ),
     myName: "Nevo David",
     profileDescription: (
