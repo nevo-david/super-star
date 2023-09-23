@@ -166,6 +166,7 @@ export class WordpressService
     return {
       title: l[0]?.title?.rendered!,
       description: l[0]?.content?.rendered!,
+      publish_date: 1,
       slug: l[0]?.slug!,
       seo: l[0]?.yoast_head,
       picture: await this.getFeaturedImage(l[0].featured_media),
@@ -210,6 +211,7 @@ export class WordpressService
     return [
       ...(await Promise.all(
         list.map(async (l) => ({
+          publish_date: 1,
           title: l.title.rendered,
           description: stripHtml(l.excerpt.rendered).result,
           slug: l.slug,

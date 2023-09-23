@@ -18,6 +18,7 @@ export class EmptyBlogService
       description: "empty",
       slug: "empty",
       seo: "empty",
+      publish_date: 1,
       picture: "empty",
       author: {
         name: "empty",
