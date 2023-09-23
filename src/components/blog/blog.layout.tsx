@@ -14,7 +14,7 @@ export const BlogLayout: FC<{
     <>
       <ExitComponent />
       <SmartLookLazy />
-      <div className="container mx-auto max-w-[800px] px-4 pb-10">
+      <div className="container mx-auto max-w-[728px] px-4 pb-10">
         <nav className="text-white flex">
           <div className="container pb-4 pt-4 mx-auto flex-1">
             <ul className="flex items-center">
