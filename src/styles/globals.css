@@ -128,7 +128,27 @@ a {
   padding-left: 30px;
 }
 .blog-container ol {
+  counter-reset:item;
+  margin:0 0 1.5em;
+  padding:0;
+}
+.blog-container ol li {
+  display: flex;
+  list-style-type:none;
+  counter-increment:item;
   padding-left: 20px;
+}
+.blog-container ol li p {
+  margin: 0 !important;
+  margin-bottom: 10px !important;
+  padding: 0 !important;
+}
+.blog-container ol>li:before {
+  width:1.5em;
+  padding-right:0.5em;
+  font-weight:bold;
+  text-align:right;
+  content:counter(item) ".";
 }
 .blog-container ul li {
   list-style: disc;
@@ -184,4 +204,9 @@ a {
 
 .balance {
   text-wrap: balance;
+}
+
+[style="border-top: 3px solid #080ea6; width: 50%;"] {
+  width: 100% !important;
+  margin: 40px 0;
 }
