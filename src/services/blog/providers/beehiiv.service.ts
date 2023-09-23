@@ -157,6 +157,7 @@ export class BeeHiivService
       dom.window.document.querySelector("#content-blocks")?.innerHTML!;
     return {
       title: data.title,
+      publish_date: data.publish_date,
       description,
       slug: slug,
       seo: `
@@ -194,6 +195,7 @@ export class BeeHiivService
             .map(async (l) => ({
               id: l.id,
               title: l.title,
+              publish_date: l.publish_date,
               created: l.created,
               description: l.subtitle,
               slug: l.slug,

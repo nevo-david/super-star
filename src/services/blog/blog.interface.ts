@@ -1,6 +1,7 @@
 export interface Details {
     id?: string;
     title: string;
+    publish_date: number;
     description: string;
     slug: string;
     seo?: string;

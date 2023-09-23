@@ -3,6 +3,7 @@ import Link from "next/link";
 import {BlogLayout} from "@github20k/components/blog/blog.layout";
 import {Details} from "@github20k/services/blog/blog.interface";
 import {NextSeo} from "next-seo";
+import dayjs from "dayjs";
 
 export const BlogComponent: FC<{
     stargazers_count: number; blog: Details[];
@@ -44,6 +45,7 @@ export const BlogComponent: FC<{
                                     </Link>
                                 </div>
                                 <div className="pt-4">
+                                    <p className="mb-2 text-sm">{dayjs.unix(blogArticle.publish_date).format('MMMM D, YYYY')}</p>
                                     <h2 className="text-xl font-semibold mb-2 text-[#E1DCFF]">
                                         <Link href={`/blog/${blogArticle.slug}`}>
                                             {blogArticle.title}

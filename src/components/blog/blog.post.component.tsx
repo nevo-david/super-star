@@ -5,6 +5,7 @@ import { Details } from "@github20k/services/blog/blog.interface";
 import ReactHtmlParser from "react-html-parser";
 import Head from "next/head";
 import { TwitterWidget } from "@github20k/helpers/twitter.widget";
+import dayjs from "dayjs";
 
 export const BlogPostComponent: FC<{
   stargazers_count: number;
@@ -31,6 +32,7 @@ export const BlogPostComponent: FC<{
             <h1 className="text-white text-4xl font-semibold mb-1">
               {blog.title}
             </h1>{" "}
+            <p className="mb-2 mt-2 text-sm">{dayjs.unix(blog.publish_date).format('MMMM D, YYYY')}</p>
             {/* Add title here */}
             <p className="text-gray-500">{blog.author.name}</p>{" "}
             {/* Add author name here */}
