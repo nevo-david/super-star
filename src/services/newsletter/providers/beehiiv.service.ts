@@ -36,7 +36,6 @@ export class BeehiivService
         email: email_address,
         reactivate_existing: false,
         send_welcome_email: true,
-        utm_source: "magnet",
         ...(referrer
           ? {
               referring_site: referrer,
