@@ -16,7 +16,7 @@ export const mainPageDetails = {
     ),
     description: (
       <span className="font-bold">
-        Learn how we have grown<br />Novu community to 24k stars,<br />Gaining more forks and clients<br />
+        Learn how we have grown<br />Novu community to 30k stars,<br />Gaining more forks and clients<br />
         subscribe to get weekly tips
       </span>
     ),
