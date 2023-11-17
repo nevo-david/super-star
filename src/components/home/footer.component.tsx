@@ -57,7 +57,7 @@ const FooterComponent: FC<{ hidePurchase?: boolean; newsletter?: boolean }> = (
         </div>
 
         <p className="text-center font-medium lg:text-lg/7 text-white/40 md:text-white">
-          © Github20K , 2023. All rights reserved.
+          © Gitroom , 2023. All rights reserved.
         </p>
       </div>
     </footer>

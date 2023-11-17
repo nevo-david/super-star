@@ -174,7 +174,7 @@ export const mainPageDetails = {
           href="https://libraries.github20k.com"
           className="underline hover:text-pink-800"
         >
-          GitHub20k library
+          Gitroom library
         </a>{" "}- it{"'"}s free.
         <br />
         <br />
@@ -206,7 +206,7 @@ export const mainPageDetails = {
       <>
         Many of my tactics can be found over my{" "}
         <Link href="/blog" className="underline hover:text-pink-800">
-          GitHub20k blog
+          Gitroom blog
         </Link>
         , I have shared tactics that can help you get your initial growth.
         <br />

@@ -128,7 +128,7 @@ export const TermsOfServiceComponent: FC<{
           <h2>14. Contact Us</h2>
           <p>
             If you have any questions or concerns about these Terms of Service,
-            please contact us at nevo@github20k.com
+            please contact us at nevo@gitroom.com
           </p>
         </div>
       </BlogLayout>
