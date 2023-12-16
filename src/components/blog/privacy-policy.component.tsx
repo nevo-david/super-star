@@ -11,7 +11,7 @@ export const PrivacyPolicyComponent: FC<{
     <>
       <NextSeo
           title={process.env.COURSE_NAME! + ' Privacy Policy'}
-          description="Learn the best tips and trick to grow your GitHub library"
+          description="Learn the best tips and trick to grow your GitHub library - Privacy Policy"
           canonical={process.env.COURSE_URL + '/privacy-policy'}
           openGraph={{
             url: process.env.COURSE_URL,
