@@ -14,7 +14,7 @@ export const BlogComponent: FC<{
             <NextSeo
                 title={process.env.COURSE_NAME! + ' Blog'}
                 description="Learn the best tips and trick to grow your GitHub library"
-                canonical={process.env.COURSE_URL}
+                canonical={process.env.COURSE_URL + '/blog'}
                 openGraph={{
                     url: process.env.COURSE_URL,
                     title: process.env.COURSE_NAME,

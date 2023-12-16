@@ -6,6 +6,7 @@ import ReactHtmlParser from "react-html-parser";
 import Head from "next/head";
 import { TwitterWidget } from "@github20k/helpers/twitter.widget";
 import dayjs from "dayjs";
+import {NextSeo} from "next-seo";
 
 export const BlogPostComponent: FC<{
   stargazers_count: number;
@@ -15,7 +16,23 @@ export const BlogPostComponent: FC<{
 
   return (
     <>
-      {blog?.seo ? <Head>{ReactHtmlParser(blog?.seo!)}</Head> : ""}
+      <NextSeo
+          title={process.env.COURSE_NAME! + ' Blog - ' + blog.title}
+          description={`Blog - ${blog.title}`}
+          canonical={process.env.COURSE_URL + '/blog/' + blog.slug}
+          openGraph={{
+            url: process.env.COURSE_URL,
+            title: process.env.COURSE_NAME,
+            description: 'Learn the best tips and trick to grow your GitHub library',
+            images: [{
+              url: process.env.COURSE_URL + "/github-blog.png", width: 1200, height: 630, alt: process.env.COURSE_NAME, type: "image/png",
+            }],
+            siteName: process.env.COURSE_NAME,
+          }}
+          twitter={{
+            handle: "@nevodavid", site: "@nevodavid", cardType: "summary_large_image",
+          }}
+      />
       <BlogLayout stargazers_count={stargazers_count} image={blog.picture}>
         <div className="flex items-center mb-4">
           <Link href="/blog" className="text-white hover:underline">
