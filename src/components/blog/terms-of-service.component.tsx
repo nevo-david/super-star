@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { BlogLayout } from "@github20k/components/blog/blog.layout";
+import {NextSeo} from "next-seo";
 
 export const TermsOfServiceComponent: FC<{
   stargazers_count: number;
@@ -8,6 +9,23 @@ export const TermsOfServiceComponent: FC<{
 
   return (
     <>
+      <NextSeo
+          title={process.env.COURSE_NAME! + ' Terms of Service'}
+          description="Learn the best tips and trick to grow your GitHub library"
+          canonical={process.env.COURSE_URL + '/terms-of-service'}
+          openGraph={{
+            url: process.env.COURSE_URL,
+            title: process.env.COURSE_NAME,
+            description: 'Learn the best tips and trick to grow your GitHub library',
+            images: [{
+              url: process.env.COURSE_URL + "/github-blog.png", width: 1200, height: 630, alt: process.env.COURSE_NAME, type: "image/png",
+            }],
+            siteName: process.env.COURSE_NAME,
+          }}
+          twitter={{
+            handle: "@nevodavid", site: "@nevodavid", cardType: "summary_large_image",
+          }}
+      />
       <BlogLayout stargazers_count={stargazers_count} image="">
         <div className="blog-container">
           <h1>Terms of Service</h1>
