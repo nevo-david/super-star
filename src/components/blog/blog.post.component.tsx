@@ -60,7 +60,7 @@ export const BlogPostComponent: FC<{
         >
           <div
             className="prose max-w-none blog-container"
-            dangerouslySetInnerHTML={{ __html: blog.description }}
+            dangerouslySetInnerHTML={{ __html: blog.description.replace(/<h1/, '<h2').replace(/<\/h1>/, '<\/h2>') }}
           />
         </TwitterWidget>
       </BlogLayout>
