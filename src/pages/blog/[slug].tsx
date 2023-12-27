@@ -22,12 +22,18 @@ export async function getStaticProps(props: { params: { slug: string } }) {
   const findAllH = description.window.document.querySelectorAll('h1, h2, h3, h4, h5, h6');
   const middleH = Math.ceil(findAllH.length / 2);
   const div = description.window.document.createElement('div');
+  div.id = 'register-newsletter';
 
   const parentOfH = findAllH[middleH]?.parentElement!;
-  const parentparentOfH = parentOfH.parentElement;
+  const parentparentOfH = parentOfH?.parentElement;
 
-  div.id = 'register-newsletter';
-  parentparentOfH?.insertBefore(div, parentOfH);
+  if (parentOfH && parentparentOfH) {
+    parentparentOfH?.insertBefore(div, parentOfH);
+  }
+  else {
+    description.window.document.append(div);
+  }
+
   blog.description = description.serialize();
   return {
     props: {
