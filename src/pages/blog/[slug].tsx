@@ -29,12 +29,13 @@ export async function getStaticProps(props: { params: { slug: string } }) {
 
   if (parentOfH && parentparentOfH) {
     parentparentOfH?.insertBefore(div, parentOfH);
+    blog.description = description.serialize();
   }
   else {
-    description.window.document.append(div);
+    blog.description += '<div id="register-newsletter"></div>';
   }
 
-  blog.description = description.serialize();
+
   return {
     props: {
       ...(await getGithubStars()),
