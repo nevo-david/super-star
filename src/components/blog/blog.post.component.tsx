@@ -1,4 +1,4 @@
-import {FC, useMemo} from "react";
+import {FC, useEffect, useMemo, useState} from "react";
 import { BlogLayout } from "@github20k/components/blog/blog.layout";
 import Link from "next/link";
 import { Details } from "@github20k/services/blog/blog.interface";
@@ -13,10 +13,14 @@ export const BlogPostComponent: FC<{
   blog: Details;
 }> = (props) => {
   const { stargazers_count, blog } = props;
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+      setLoaded(true);
+  }, []);
 
   return (
     <>
-      <RegisterNewsletterAfter />
       <NextSeo
           title={process.env.COURSE_NAME! + ' Blog - ' + blog.title}
           description={`Blog - ${blog.title}`}
@@ -65,6 +69,7 @@ export const BlogPostComponent: FC<{
           />
         </TwitterWidget>
       </BlogLayout>
+      {loaded && <RegisterNewsletterAfter />}
     </>
   );
 };
