@@ -1,12 +1,12 @@
-import { FC } from "react";
+import {FC, useMemo} from "react";
 import { BlogLayout } from "@github20k/components/blog/blog.layout";
 import Link from "next/link";
 import { Details } from "@github20k/services/blog/blog.interface";
-import ReactHtmlParser from "react-html-parser";
-import Head from "next/head";
 import { TwitterWidget } from "@github20k/helpers/twitter.widget";
 import dayjs from "dayjs";
 import {NextSeo} from "next-seo";
+import dynamic from "next/dynamic";
+const RegisterNewsletterAfter = dynamic(() => import('@github20k/components/blog/register.newsletter.after'), { ssr: false });
 
 export const BlogPostComponent: FC<{
   stargazers_count: number;
@@ -16,6 +16,7 @@ export const BlogPostComponent: FC<{
 
   return (
     <>
+      <RegisterNewsletterAfter />
       <NextSeo
           title={process.env.COURSE_NAME! + ' Blog - ' + blog.title}
           description={`Blog - ${blog.title}`}
@@ -60,7 +61,7 @@ export const BlogPostComponent: FC<{
         >
           <div
             className="prose max-w-none blog-container"
-            dangerouslySetInnerHTML={{ __html: blog.description.replace(/<h1/, '<h2').replace(/<\/h1>/, '<\/h2>') }}
+            dangerouslySetInnerHTML={{ __html: blog.description }}
           />
         </TwitterWidget>
       </BlogLayout>
