@@ -19,7 +19,7 @@ const NewsletterComponent: FC<{ showText: boolean, hideBottom?: boolean, magnet?
       onSubmit: (values) => {
         localStorage.setItem('once', 'true');
         // @ts-ignore
-        TrackingHelper.reddit('SignUp', undefined);
+        TrackingHelper.reddit('SignUp');
         axios.post("/api/newsletter", { ...values, referrer: referrer(), magnet });
         setSubmitted(true);
       },
