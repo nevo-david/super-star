@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import newsletterValidation from "@github20k/helpers/newsletter.validation";
 import axios from "axios";
 import { useReferrer } from "@github20k/helpers/use.referrer";
+import {TrackingHelper} from "@github20k/helpers/tracking.helper";
 
 const NewsletterComponent: FC<{ showText: boolean, hideBottom?: boolean, magnet?: boolean }> = (props) => {
   const { magnet, hideBottom, showText } = props;
@@ -18,10 +19,7 @@ const NewsletterComponent: FC<{ showText: boolean, hideBottom?: boolean, magnet?
       onSubmit: (values) => {
         localStorage.setItem('once', 'true');
         // @ts-ignore
-        if (window?.gtag) {
-          // @ts-ignore
-          window.gtag("event", "conversion");
-        }
+        TrackingHelper.reddit('SignUp', undefined);
         axios.post("/api/newsletter", { ...values, referrer: referrer(), magnet });
         setSubmitted(true);
       },
