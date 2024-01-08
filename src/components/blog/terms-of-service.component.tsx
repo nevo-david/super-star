@@ -13,6 +13,11 @@ export const TermsOfServiceComponent: FC<{
           title={process.env.COURSE_NAME! + ' Terms of Service'}
           description="Learn the best tips and trick to grow your GitHub library - Terms of Service"
           canonical={process.env.COURSE_URL + '/terms-of-service'}
+          additionalLinkTags={[{
+            rel: 'alternate',
+            type: 'application/rss+xml',
+            href: 'https://gitroom.com/feed.xml',
+          }]}
           openGraph={{
             url: process.env.COURSE_URL,
             title: process.env.COURSE_NAME,

@@ -26,6 +26,11 @@ const HomeComponent: FC<{ stargazers_count: number }> = (props) => {
             <NextSeo
                 title={process.env.COURSE_NAME}
                 description={description}
+                additionalLinkTags={[{
+                    rel: 'alternate',
+                    type: 'application/rss+xml',
+                    href: 'https://gitroom.com/feed.xml',
+                }]}
                 canonical={process.env.COURSE_URL}
                 openGraph={{
                     url: process.env.COURSE_URL, title: process.env.COURSE_NAME, description: description, images: [{

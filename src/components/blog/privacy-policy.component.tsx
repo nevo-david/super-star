@@ -13,6 +13,11 @@ export const PrivacyPolicyComponent: FC<{
           title={process.env.COURSE_NAME! + ' Privacy Policy'}
           description="Learn the best tips and trick to grow your GitHub library - Privacy Policy"
           canonical={process.env.COURSE_URL + '/privacy-policy'}
+          additionalLinkTags={[{
+            rel: 'alternate',
+            type: 'application/rss+xml',
+            href: 'https://gitroom.com/feed.xml',
+          }]}
           openGraph={{
             url: process.env.COURSE_URL,
             title: process.env.COURSE_NAME,

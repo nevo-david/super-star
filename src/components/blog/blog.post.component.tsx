@@ -25,6 +25,11 @@ export const BlogPostComponent: FC<{
           title={process.env.COURSE_NAME! + ' Blog - ' + blog.title}
           description={`Blog - ${blog.title}`}
           canonical={process.env.COURSE_URL + '/blog/' + blog.slug}
+          additionalLinkTags={[{
+              rel: 'alternate',
+              type: 'application/rss+xml',
+              href: 'https://gitroom.com/feed.xml',
+          }]}
           openGraph={{
             url: process.env.COURSE_URL,
             title: process.env.COURSE_NAME,
