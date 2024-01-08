@@ -1,6 +1,8 @@
 {
   "ts-node": {
-    "require": ["tsconfig-paths/register"],
+    "require": [
+      "tsconfig-paths/register"
+    ],
     "compilerOptions": {
       "module": "commonjs",
       "moduleResolution": "node",
@@ -11,13 +13,23 @@
       "strict": false,
       "suppressImplicitAnyIndexErrors": true
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules"]
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
   },
   "compilerOptions": {
     "baseUrl": "./",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -31,9 +43,23 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@github20k/*": ["./src/*"]
-    }
+      "@github20k/*": [
+        "./src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
