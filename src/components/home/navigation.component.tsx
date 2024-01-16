@@ -13,7 +13,7 @@ const NavigationComponent: FC<{ stars: number }> = (props) => {
         <Link href="/blog" className="hover:font-bold pr-5 whitespace-nowrap underline">Read the blog</Link>
         <div className="whitespace-nowrap flex-1 sm:max-w-xs mx-auto md:mr-0 flex items-center bg-nav-stat-gr border border-brand-plum divide-x-2 divide-brand-plum rounded-xl p-1">
           <Link
-            href={`https://calendly.com/github20k/30min?utm_source=website`}
+            href={`https://cal.com/gitroom/30min?utm_source=website`}
             target="blank"
             className="flex-1 text-brand-white-medium text-center font-semibold xl:py-3.5 title-shadow-strong drop-shadow-xl"
           >

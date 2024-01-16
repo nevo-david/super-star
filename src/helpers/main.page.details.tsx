@@ -190,7 +190,7 @@ export const mainPageDetails = {
         Need extra help? maybe I can help you out
         <br />
         <a
-          href="https://calendly.com/github20k"
+          href="https://cal.com/gitroom/30min"
           target="_blank"
           className="underline hover:text-pink-800"
         >
@@ -222,7 +222,7 @@ export const mainPageDetails = {
         Let{"'"}s meet, maybe I can help you out
         <br />
         <a
-          href="https://calendly.com/github20k"
+          href="https://cal.com/gitroom/30min"
           target="_blank"
           className="underline hover:text-pink-800"
         >

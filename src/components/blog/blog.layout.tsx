@@ -30,7 +30,7 @@ export const BlogLayout: FC<{
               </li>
               <li>
                 <Link
-                    href="https://calendly.com/github20k/30min?utm_source=blog"
+                    href="https://cal.com/gitroom/30min?utm_source=blog"
                     target="_blank"
                     className="font-semibold"
                 >
