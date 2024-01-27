@@ -133,22 +133,15 @@ a {
   padding:0;
 }
 .blog-container ol li {
-  display: flex;
-  list-style-type:none;
+  /*display: flex;*/
   counter-increment:item;
+  list-style: decimal;
   padding-left: 20px;
 }
 .blog-container ol li p {
   margin: 0 !important;
   margin-bottom: 10px !important;
   padding: 0 !important;
-}
-.blog-container ol>li:before {
-  width:1.5em;
-  padding-right:0.5em;
-  font-weight:bold;
-  text-align:right;
-  content:counter(item) ".";
 }
 .blog-container ul li {
   list-style: disc;
