@@ -3,7 +3,6 @@ import axios from "axios";
 // since there is a limit over GitHub stars, let's cache the results
 let stargazers_count = 0;
 export const getGithubStars = async () => {
-  return { stargazers_count: 0 };
   if (stargazers_count) {
     return { stargazers_count };
   }

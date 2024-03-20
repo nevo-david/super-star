@@ -42,7 +42,7 @@ const HomeComponent: FC<{ stargazers_count: number }> = (props) => {
                 }}
             />
             <SmartLookLazy />
-            <NavigationComponent stars={0} />
+            <NavigationComponent stars={stargazers_count} />
             <ExitComponent />
             <main>
                 <HeroComponent/>
