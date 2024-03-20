@@ -16,6 +16,7 @@ const NavigationComponent: FC<{ stars: number }> = (props) => {
               </div>
               <div className="mt-[12px]">Gitroom</div>
           </Link>
+          <div><Link href="/blog" className="hover:font-bold underline">Blog</Link></div>
           <div className="max-lg:hidden"><Link href="/pricing" className="hover:font-bold underline">Pricing</Link></div>
           <div className="max-lg:hidden"><a href="https://cal.com/gitroom/30min?utm_source=website" className="hover:font-bold underline" target="_blank">Book a call</a></div>
           <div className="max-lg:hidden"><a href="https://docs.gitroom.com" className="hover:font-bold underline" target="_blank">Documentation</a></div>
