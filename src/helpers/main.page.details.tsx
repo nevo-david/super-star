@@ -11,7 +11,7 @@ export const mainPageDetails = {
           OPEN-SOURCE
         </span>
         <br />
-        LIBRARY
+        REPOSITORY
       </span>
     ),
     description: (

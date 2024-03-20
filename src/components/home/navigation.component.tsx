@@ -1,6 +1,5 @@
 import { FC, useMemo } from "react";
 import numeral from "numeral";
-import Link from "next/link";
 
 
 const NavigationComponent: FC<{ stars: number }> = (props) => {
@@ -13,25 +12,21 @@ const NavigationComponent: FC<{ stars: number }> = (props) => {
         <div><a href="https://cal.com/gitroom/30min?utm_source=website" className="hover:font-bold underline" target="_blank">Book a call</a></div>
         <div><a href="https://docs.gitroom.com" className="hover:font-bold underline" target="_blank">Documentation</a></div>
         <div><a href="https://platform.gitroom.com" className="hover:font-bold underline" target="_blank">Get Started</a></div>
-        <div className="sm:max-w-xs md:mr-0 flex items-center grow bg-nav-stat-gr border border-brand-plum divide-x-2 divide-brand-plum rounded-xl p-1">
+        <a href={`https://github.com/${process.env.GITHUB_REPO}`} target="_blank" className="sm:max-w-xs md:mr-0 flex items-center grow bg-nav-stat-gr border border-brand-plum divide-x-2 divide-brand-plum rounded-xl p-1">
           <button className="flex-1 flex items-center justify-center gap-x-5 py-2.5 xl:py-3.5 text-brand-plum font-semibold">
             <GithubSvg/>
-            <Link
-                href={`https://github.com/${process.env.GITHUB_REPO}`}
-                target="blank"
+            <div
                 className="uppercase"
             >
               stars
-            </Link>
+            </div>
           </button>
-          <Link
-              href={`https://github.com/${process.env.GITHUB_REPO}`}
-              target="blank"
+          <div
               className="flex-1 text-brand-white-medium text-center py-2.5 font-semibold xl:py-3.5"
           >
             {formatStars}
-          </Link>
-        </div>
+          </div>
+        </a>
       </header>
   );
 };
