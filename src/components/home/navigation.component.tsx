@@ -2,6 +2,7 @@ import { FC, useMemo } from "react";
 import numeral from "numeral";
 import Link from "next/link";
 
+
 const NavigationComponent: FC<{ stars: number }> = (props) => {
   const { stars } = props;
   const formatStars = useMemo(() => {
