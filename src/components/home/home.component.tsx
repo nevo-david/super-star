@@ -9,7 +9,6 @@ import {NextSeo} from "next-seo";
 import {mainPageDetails} from "@github20k/helpers/main.page.details";
 import {stripHtml} from "string-strip-html";
 import ReactDomServer from "react-dom/server";
-import {SmartLookLazy} from "@github20k/helpers/smartlook.lazy.component";
 import NavigationComponent from "@github20k/components/home/navigation.component";
 import ExitComponent from "@github20k/helpers/use.exit";
 
@@ -41,9 +40,7 @@ const HomeComponent: FC<{ stargazers_count: number }> = (props) => {
                     handle: "@nevodavid", site: "@nevodavid", cardType: "summary_large_image",
                 }}
             />
-            <SmartLookLazy />
             <NavigationComponent stars={stargazers_count} />
-            <ExitComponent />
             <main>
                 <HeroComponent/>
                 <div className="relative bg-about-bg bg-cover lg:bg-contain bg-center bg-no-repeat">
@@ -52,10 +49,6 @@ const HomeComponent: FC<{ stargazers_count: number }> = (props) => {
                 </div>
                 <StarsCourseComponent/>
                 <RecordingWithCompaniesComponent/>
-                {/*<PersonalMeetingComponent />*/}
-                {/*<TechnicalContentComponent />*/}
-                {/*<GetItNowComponent />*/}
-                {/*<FaqComponent />*/}
             </main>
             <FooterComponent hidePurchase={true} newsletter={true}/>
         </>);

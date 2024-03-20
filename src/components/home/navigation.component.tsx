@@ -1,5 +1,6 @@
 import { FC, useMemo } from "react";
 import numeral from "numeral";
+import Link from "next/link";
 
 
 const NavigationComponent: FC<{ stars: number }> = (props) => {
@@ -8,25 +9,32 @@ const NavigationComponent: FC<{ stars: number }> = (props) => {
     return numeral(stars).format();
   }, [stars]);
   return (
-      <header className="border-b-2 border-[#000] bg-[#0E0642] w-full mx-auto px-6 absolute top-0 right-0 z-50 xl:mb-16 pt-3 pb-3 flex justify-end items-center gap-[20px]">
-        <div><a href="https://cal.com/gitroom/30min?utm_source=website" className="hover:font-bold underline" target="_blank">Book a call</a></div>
-        <div><a href="https://docs.gitroom.com" className="hover:font-bold underline" target="_blank">Documentation</a></div>
-        <div><a href="https://platform.gitroom.com" className="hover:font-bold underline" target="_blank">Get Started</a></div>
-        <a href={`https://github.com/${process.env.GITHUB_REPO}`} target="_blank" className="sm:max-w-xs md:mr-0 flex items-center grow bg-nav-stat-gr border border-brand-plum divide-x-2 divide-brand-plum rounded-xl p-1">
-          <button className="flex-1 flex items-center justify-center gap-x-5 py-2.5 xl:py-3.5 text-brand-plum font-semibold">
-            <GithubSvg/>
-            <div
-                className="uppercase"
-            >
-              stars
-            </div>
-          </button>
-          <div
-              className="flex-1 text-brand-white-medium text-center py-2.5 font-semibold xl:py-3.5"
-          >
-            {formatStars}
-          </div>
-        </a>
+      <header className="border-b-2 border-[#000] bg-[#0E0642] w-full mx-auto px-6 absolute top-0 right-0 z-50 xl:mb-16 pt-3 pb-3 flex items-center justify-center gap-[20px]">
+          <Link className="text-2xl flex items-center gap-[10px] flex-1 flex-grow" href="/">
+              <div>
+                  <img alt="Logo" loading="lazy" className="min-w-[55px]" width="55" height="53" decoding="async" data-nimg="1" src="/svg/logo.svg"/>
+              </div>
+              <div className="mt-[12px]">Gitroom</div>
+          </Link>
+          <div className="max-lg:hidden"><Link href="/pricing" className="hover:font-bold underline">Pricing</Link></div>
+          <div className="max-lg:hidden"><a href="https://cal.com/gitroom/30min?utm_source=website" className="hover:font-bold underline" target="_blank">Book a call</a></div>
+          <div className="max-lg:hidden"><a href="https://docs.gitroom.com" className="hover:font-bold underline" target="_blank">Documentation</a></div>
+          <div className="max-lg:hidden"><a href="https://platform.gitroom.com" className="hover:font-bold underline" target="_blank">Get Started</a></div>
+          <a href={`https://github.com/${process.env.GITHUB_REPO}`} target="_blank" className="sm:max-w-xs md:mr-0 flex items-center grow bg-nav-stat-gr border border-brand-plum divide-x-2 divide-brand-plum rounded-xl p-1">
+              <button className="flex-1 flex items-center justify-center gap-x-5 py-2.5 xl:py-3.5 text-brand-plum font-semibold">
+                  <GithubSvg/>
+                  <div
+                      className="uppercase"
+                  >
+                      stars
+                  </div>
+              </button>
+              <div
+                  className="flex-1 text-brand-white-medium text-center py-2.5 font-semibold xl:py-3.5"
+              >
+                  {formatStars}
+              </div>
+          </a>
       </header>
   );
 };
@@ -34,13 +42,13 @@ const NavigationComponent: FC<{ stars: number }> = (props) => {
 export default NavigationComponent;
 
 const GithubSvg = () => {
-  return (<svg
-          width={24}
-          height={20}
-          viewBox="0 0 24 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
+    return (<svg
+            width={24}
+            height={20}
+            viewBox="0 0 24 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <rect width={24} height={20} fill="url(#pattern0)"/>
         <defs>

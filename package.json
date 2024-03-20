@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npx ts-node env.check.ts && concurrently \"node ngrok.js\" \"next dev\"",
+    "dev": "npx ts-node env.check.ts && next dev",
     "build": "npx ts-node env.check.ts && next build",
     "postbuild": "next-sitemap",
     "start": "npx ts-node env.check.ts && next start",
@@ -21,6 +21,7 @@
     "@types/rss": "^0.0.32",
     "@types/yup": "^0.32.0",
     "axios": "^1.3.4",
+    "clsx": "^2.1.0",
     "concurrently": "^7.6.0",
     "dayjs": "^1.11.9",
     "dotenv": "^16.0.3",
